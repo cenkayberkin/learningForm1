@@ -17,7 +17,8 @@ namespace learningForm1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyForm());
+            //Application.Run(new MyForm());
+            Application.Run(new LifeCycle());
         }
     }
 }
