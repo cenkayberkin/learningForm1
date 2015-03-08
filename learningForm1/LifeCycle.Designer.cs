@@ -75,6 +75,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "LifeCycle";
             this.Text = "Life Cycle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LifeCycle_FormClosing);
             this.Load += new System.EventHandler(this.LifeCycle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

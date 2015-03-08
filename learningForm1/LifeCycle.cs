@@ -27,7 +27,21 @@ namespace learningForm1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (listBox1.SelectedIndex == -1)
+            {
+                string msg = "Please select an item from the list box";
+                MessageBox.Show(msg, this.Text);
+            }
             label1.Text = listBox1.Text;
+        }
+
+        private void LifeCycle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Are you sure want to close?";
+            if (MessageBox.Show(msg, this.Text, MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
