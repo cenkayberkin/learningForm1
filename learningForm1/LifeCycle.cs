@@ -37,11 +37,17 @@ namespace learningForm1
 
         private void LifeCycle_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string msg = "Are you sure want to close?";
-            if (MessageBox.Show(msg, this.Text, MessageBoxButtons.YesNo) == DialogResult.No)
+            ConfirmDialog cdialog = new ConfirmDialog();
+            if (cdialog.ShowDialog() == DialogResult.No)
             {
                 e.Cancel = true;
             }
+
+            //string msg = "Are you sure want to close?";
+            //if (MessageBox.Show(msg, this.Text, MessageBoxButtons.YesNo) == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
         }
     }
 }
